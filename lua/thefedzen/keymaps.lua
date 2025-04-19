@@ -20,10 +20,7 @@ keymap.set("n", "N", "Nzzzv")
 keymap.set("x", "<leader>p", [["_dP]])
 
 -- format buffer
--- keymap.set("n", "<leader>f", vim.lsp.buf.format)
-keymap.set("n", "<leader>f", function()
-  require("conform").format({ async = true })
-end)
+keymap.set("n", "<leader>f", vim.lsp.buf.format)
 
 -- remove Q command (legacy vim)
 keymap.set("n", "Q", "<nop>")
