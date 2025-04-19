@@ -30,7 +30,7 @@ opt.backup = false
 opt.swapfile = false
 
 opt.signcolumn = "yes"
-opt.colorcolumn = "80"
+-- opt.colorcolumn = "80"
 opt.splitbelow = true
 opt.splitright = true
 opt.splitkeep = "cursor"

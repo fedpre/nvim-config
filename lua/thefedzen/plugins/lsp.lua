@@ -33,7 +33,6 @@ return {
         "elixirls",
         "tailwindcss",
         "eslint",
-        -- "prettier" -- figure out why it's not accepted
       },
       handlers = {
         function(server_name) -- default handler (optional)
