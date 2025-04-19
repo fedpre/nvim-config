@@ -23,11 +23,11 @@ return {
       cmp_lsp.default_capabilities())
 
     local lsp = require("telescope.builtin")
-    vim.keymap.set("n","gd", function()
-     lsp.lsp_definitions({ reuse_win = false })
+    vim.keymap.set("n", "gd", function()
+      lsp.lsp_definitions({ reuse_win = false })
     end)
-    vim.keymap.set("n","gi", function()
-     lsp.lsp_implementations({ reuse_win = false })
+    vim.keymap.set("n", "gi", function()
+      lsp.lsp_implementations({ reuse_win = false })
     end)
 
     require("fidget").setup({})
@@ -40,6 +40,8 @@ return {
         "gopls",
         "elixirls",
         "tailwindcss",
+        "eslint",
+        -- "prettier" -- figure out why it's not accepted
       },
       handlers = {
         function(server_name) -- default handler (optional)
