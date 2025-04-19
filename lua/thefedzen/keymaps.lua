@@ -20,7 +20,10 @@ keymap.set("n", "N", "Nzzzv")
 keymap.set("x", "<leader>p", [["_dP]])
 
 -- format buffer
-keymap.set("n", "<leader>f", vim.lsp.buf.format)
+-- keymap.set("n", "<leader>f", vim.lsp.buf.format)
+keymap.set("n", "<leader>f", function()
+  require("conform").format({ async = true })
+end)
 
 -- remove Q command (legacy vim)
 keymap.set("n", "Q", "<nop>")
@@ -53,14 +56,6 @@ end, { desc = "Open/close quickfix list" })
 
 keymap.set("n", "[q", vim.cmd.cprev, { desc = "Previous Quickfix" })
 keymap.set("n", "]q", vim.cmd.cnext, { desc = "Next Quickfix" })
-
--- diagnostics
-keymap.set("n", "]d", function()
-  vim.diagnostic.goto_next()
-end, opts)
-keymap.set("n", "[d", function()
-  vim.diagnostic.goto_prev()
-end, opts)
 
 -- copy relative file path
 keymap.set("n", "<C-p>", function()
