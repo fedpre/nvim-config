@@ -19,9 +19,6 @@ keymap.set("n", "N", "Nzzzv")
 -- paste without losing the copied text
 keymap.set("x", "<leader>p", [["_dP]])
 
--- format buffer
-keymap.set("n", "<leader>f", vim.lsp.buf.format)
-
 -- remove Q command (legacy vim)
 keymap.set("n", "Q", "<nop>")
 
@@ -38,17 +35,17 @@ keymap.set("n", "<leader>k", "<cmd>lnext<CR>zz")
 keymap.set("n", "<leader>j", "<cmd>lprev<CR>zz")
 
 keymap.set("n", "<leader>xl", function()
-  local success, err = pcall(vim.fn.getloclist(0, { winid = 0 }).winid ~= 0 and vim.cmd.lclose or vim.cmd.lopen)
-  if not success and err then
-    vim.notify(err, vim.log.levels.ERROR)
-  end
+	local success, err = pcall(vim.fn.getloclist(0, { winid = 0 }).winid ~= 0 and vim.cmd.lclose or vim.cmd.lopen)
+	if not success and err then
+		vim.notify(err, vim.log.levels.ERROR)
+	end
 end, { desc = "Open/close location list" })
 
 keymap.set("n", "<leader>xq", function()
-  local success, err = pcall(vim.fn.getqflist({ winid = 0 }).winid ~= 0 and vim.cmd.cclose or vim.cmd.copen)
-  if not success and err then
-    vim.notify(err, vim.log.levels.ERROR)
-  end
+	local success, err = pcall(vim.fn.getqflist({ winid = 0 }).winid ~= 0 and vim.cmd.cclose or vim.cmd.copen)
+	if not success and err then
+		vim.notify(err, vim.log.levels.ERROR)
+	end
 end, { desc = "Open/close quickfix list" })
 
 keymap.set("n", "[q", vim.cmd.cprev, { desc = "Previous Quickfix" })
@@ -56,5 +53,5 @@ keymap.set("n", "]q", vim.cmd.cnext, { desc = "Next Quickfix" })
 
 -- copy relative file path
 keymap.set("n", "<C-p>", function()
-  vim.fn.setreg("+", vim.fn.expand("%"))
+	vim.fn.setreg("+", vim.fn.expand("%"))
 end, { desc = "Copy relative file path" })
