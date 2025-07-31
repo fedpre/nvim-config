@@ -2,7 +2,7 @@ local keymap = vim.keymap
 keymap.set("n", "<leader>l", "<cmd>Lazy<cr>")
 
 -- open Netrw
-keymap.set("n", "<leader>e", vim.cmd.Ex)
+-- keymap.set("n", "<leader>e", vim.cmd.Ex)
 
 -- move the line up or down
 keymap.set("v", "J", ":m '>+1<CR>gv=gv")
