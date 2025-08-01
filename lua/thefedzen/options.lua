@@ -6,6 +6,7 @@ vim.g.mapleader = " "
 -- vim.g.netrw_winsize = 25
 vim.g.loaded_netrw = 1
 vim.g.loaded_netrwPlugin = 1
+vim.g.lazyvim_prettier_needs_config = true
 
 opt.number = true
 opt.relativenumber = true
@@ -31,7 +32,7 @@ opt.linebreak = true
 opt.backup = false
 opt.swapfile = false
 
-opt.signcolumn = "yes"
+--opt.signcolumn = "yes"
 -- opt.colorcolumn = "80"
 opt.splitbelow = true
 opt.splitright = true
