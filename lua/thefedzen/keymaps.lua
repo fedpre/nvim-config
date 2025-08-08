@@ -25,8 +25,8 @@ keymap.set("n", "Q", "<nop>")
 -- save all
 keymap.set("n", "<leader>w", "<cmd>wa<cr>")
 
--- quit
-keymap.set("n", "<leader>q", "<cmd>q<cr>")
+-- quit all
+keymap.set("n", "<leader>q", "<cmd>qa<cr>")
 
 -- navigate quick list and location list
 keymap.set("n", "<C-k>", "<cmd>cnext<CR>zz")

@@ -26,11 +26,11 @@ return {
 				or vim.fn.filereadable(cwd .. "/prettier.config.js") == 1
 
 			local formatters = {}
-			if has_eslint then
-				table.insert(formatters, "eslint_d")
-			end
 			if has_prettier then
 				table.insert(formatters, "prettier")
+			end
+			if has_eslint then
+				table.insert(formatters, "eslint_d")
 			end
 
 			return #formatters > 0 and formatters or { "prettier" }
@@ -57,6 +57,7 @@ return {
 					return { "prettier" }
 				end,
 				yaml = { "prettier" },
+				yml = { "prettier" },
 				markdown = { "prettier" },
 				graphql = { "prettier" },
 				lua = { "stylua" },

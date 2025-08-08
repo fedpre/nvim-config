@@ -32,7 +32,7 @@ opt.linebreak = true
 opt.backup = false
 opt.swapfile = false
 
---opt.signcolumn = "yes"
+opt.signcolumn = "yes"
 -- opt.colorcolumn = "80"
 opt.splitbelow = true
 opt.splitright = true

@@ -11,7 +11,7 @@ return {
 		---@module 'neo-tree'
 		---@type neotree.Config
 		opts = {
-			vim.keymap.set("n", "<leader>e", ":Neotree toggle<CR>"),
+			vim.keymap.set("n", "<leader>e", ":Neotree toggle reveal_force_cwd<CR>"),
 			vim.keymap.set("n", "<leader>ge", ":Neotree git_status<CR>"),
 			vim.keymap.set("n", "<leader>be", ":Neotree buffers<CR>"),
 			-- options go here
